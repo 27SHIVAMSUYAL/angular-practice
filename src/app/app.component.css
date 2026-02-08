@@ -1,0 +1,31 @@
+
+
+.main {
+  background-color: beige;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.navbar-div {
+  background-color: darkcyan;
+  /* Let navbar size itself naturally OR set a specific height */
+  /* Option 1: flex: 0 0 auto; (keeps navbar at natural height) */
+  flex: 0 0 auto;
+}
+
+.hero-container {
+  flex: 1;
+
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+
+app-login-card {
+  flex: 1;
+  max-width: 1000px;
+}
