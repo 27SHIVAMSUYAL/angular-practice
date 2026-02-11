@@ -1,0 +1,23 @@
+<p>product-catalog-form works!</p>
+
+<div>
+    <h1>Product Catalog Form    </h1>
+<input type="file" accept=".xlsx,.xls" (change)="onFileSelected($event)" />
+
+</div>
+
+<div id="dashboard">
+    <dx-progress-bar id="progress"></dx-progress-bar>
+    <dx-data-grid
+    id="task-grid"
+    [dataSource]="tasks"
+    keyExpr="product_id"
+>
+    <dxi-data-grid-column dataField="product_name"></dxi-data-grid-column>
+    <dxi-data-grid-column dataField="product_quantity"></dxi-data-grid-column>
+    <dxi-data-grid-column dataField="product_price"></dxi-data-grid-column>
+  
+</dx-data-grid>
+</div>
+
+

@@ -1,0 +1,19 @@
+<p>customer-form works!</p>
+<form action="/employee-page" id="form-container">
+    <dx-form #dxForm id="form" [formData]="customer">
+        <dxi-form-item dataField="name" [isRequired]="true"></dxi-form-item>
+        <dxi-form-item dataField="productId" [isRequired]="true">
+            <dxi-form-validation-rule type="numeric">
+            </dxi-form-validation-rule>
+        </dxi-form-item>
+        <dxi-form-item dataField="quantity" [isRequired]="true">
+            <dxi-form-validation-rule type="numeric">
+            </dxi-form-validation-rule>
+        </dxi-form-item>
+        <dxi-form-item dataField="purchaseDate" [editorOptions]="purchaseDateOptions">
+        </dxi-form-item>
+        <dxi-form-item itemType="button" [buttonOptions]="submitButtonOptions">
+        </dxi-form-item>
+    </dx-form>
+
+</form>
