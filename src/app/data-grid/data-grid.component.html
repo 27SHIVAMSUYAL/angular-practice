@@ -1,0 +1,9 @@
+<dx-data-grid
+    id="task-grid"
+    [dataSource]="tasks"
+    keyExpr="id"
+>
+    <dxi-data-grid-column dataField="task"></dxi-data-grid-column>
+    <dxi-data-grid-column dataField="dueDate"></dxi-data-grid-column>
+    <dxi-data-grid-column dataField="done"></dxi-data-grid-column>
+</dx-data-grid>
