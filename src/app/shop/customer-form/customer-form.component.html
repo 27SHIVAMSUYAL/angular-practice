@@ -1,16 +1,25 @@
-<p>customer-form works!</p>
+<h1>customer form works </h1>
 <form action="/employee-page" id="form-container">
     <dx-form #dxForm id="form" [formData]="customer">
-        <dxi-form-item dataField="name" [isRequired]="true"></dxi-form-item>
-        <dxi-form-item dataField="productId" [isRequired]="true">
+        <dxi-form-item dataField="name" [isRequired]="true">
+
+        </dxi-form-item>
+        <dxi-form-item dataField="mobile" [isRequired]="true">
             <dxi-form-validation-rule type="numeric">
             </dxi-form-validation-rule>
         </dxi-form-item>
-        <dxi-form-item dataField="quantity" [isRequired]="true">
-            <dxi-form-validation-rule type="numeric">
+        <dxi-form-item dataField="email" [isRequired]="true">
+            <dxi-form-validation-rule type="email">
             </dxi-form-validation-rule>
         </dxi-form-item>
-        <dxi-form-item dataField="purchaseDate" [editorOptions]="purchaseDateOptions">
+        <dxi-form-item dataField="gender">
+    <dx-drop-down-box [(value)]="customer.gender" [dataSource]="genders" displayExpr="name" valueExpr="id">
+        <dx-list [dataSource]="genders" displayExpr="name" [allowItemDeleting]="false" selectionMode="single"
+            (onSelectionChanged)="changeDropDownBoxValue($event)">
+        </dx-list>
+    </dx-drop-down-box>
+</dxi-form-item>
+        <dxi-form-item dataField="dob" [editorOptions]="dobOptions">
         </dxi-form-item>
         <dxi-form-item itemType="button" [buttonOptions]="submitButtonOptions">
         </dxi-form-item>
